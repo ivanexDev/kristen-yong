@@ -1,0 +1,52 @@
+---
+const items = [
+  {
+    title: "Home",
+    route: "/",
+  },
+  {
+    title: "Bio",
+    route: "#bio",
+  },
+  {
+    title: "Links",
+    route: "#links",
+  },
+  {
+    title: "System Cultivation",
+    route: "/system",
+  },
+  {
+    title: "Contact",
+    route: "mailto:kristencarcamo@gmail.com",
+  },
+];
+---
+
+<nav
+  class="bg-[#0C2C3Dff] text-[#D2C69Cff] flex flex-col p-8 items-center border-b border-b-white gap-7"
+>
+  <div>
+    <a href="/"><h1 class="text-7xl">Kristen Yong</h1></a>
+  </div>
+  <ul class="flex justify-between w-full max-w-[1088px]">
+    {
+      items.map((item) => {
+        return (
+          <li>
+            <a href={item.route}>{item.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style>
+  h1 {
+    font-family: "Asiatiyca", sans-serif;
+  }
+  li {
+    font-family: "Asiatiyca", sans-serif;
+  }
+</style>

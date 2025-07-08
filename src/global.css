@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --bone: #E5D7C2ff;
+  --powder-blue: #A7BEC8ff;
+  --air-force-blue: #5B88A2ff;
+  --licorice: #291A1Aff;
+  --raisin-black: #302525ff;
+  --cerulean: #4A7590ff;
+  --sage: #D2C69Cff;
+  --prussian-blue: #0C2C3Dff;
+}

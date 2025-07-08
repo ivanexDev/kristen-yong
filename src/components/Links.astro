@@ -1,0 +1,113 @@
+---
+const links = [
+  {
+    app: "Instagram",
+    img: "/public/icons/instagram.png",
+    url: "https://www.instagram.com/yongkristen.author/",
+  },
+  {
+    app: "TikTok",
+    img: "/public/icons/tiktok.webp",
+    url: "https://www.tiktok.com/@danmei.kristenyong",
+  },
+  {
+    app: "Web Novels",
+    img: "/public/icons/webnovel.webp",
+    url: "https://www.webnovel.com/profile/4503309999",
+  },
+  {
+    app: "Royal Road",
+    img: "/public/icons/royalroad.webp",
+    url: "https://www.royalroad.com/fiction/123560/the-frost-and-the-flame-bl",
+  },
+  {
+    app: "ko-fi",
+    img: "/public/icons/ko-fi.webp",
+    url: "https://ko-fi.com/yongk_author/10",
+  },
+];
+---
+
+<section id="links" class="w-screen p-8 bg-black">
+  <div class="max-w-[1080px] mx-auto w-full">
+    <div class="flex flex-wrap justify-between">
+      {
+        links.map((app) => {
+          const sizes = app.app === "ko-fi" ? "h-[50px]" : "h-[50px] w-[50px]";
+
+          return (
+            <a href={app.url}>
+              <img class={sizes} src={app.img} alt={app.app} />
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+<style>
+  a:hover img {
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+  }
+  @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+</style>
