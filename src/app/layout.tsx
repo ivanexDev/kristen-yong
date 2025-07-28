@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./animations.css";
 import { Header } from "@/components/Header";
@@ -7,11 +7,6 @@ import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-export const inter = Inter({
-  weight:"400",
   subsets: ["latin"],
 });
 
@@ -32,12 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.className} min-h-screen flex flex-col`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col`}
+      >
         <Header />
-                <main className="flex-1 w-full flex flex-col items-center">
-
-        {children}
-                </main>
+        <main className="flex-1 w-full flex flex-col items-center">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
