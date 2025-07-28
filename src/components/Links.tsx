@@ -1,0 +1,51 @@
+import Link from "next/link";
+import React from "react";
+
+export const Links = () => {
+  const links = [
+    {
+      app: "Instagram",
+      img: "/icons/instagram.png",
+      url: "https://www.instagram.com/yongkristen.author/",
+    },
+    {
+      app: "TikTok",
+      img: "/icons/tiktok.webp",
+      url: "https://www.tiktok.com/@danmei.kristenyong",
+    },
+    {
+      app: "Web Novels",
+      img: "/icons/webnovel.webp",
+      url: "https://www.webnovel.com/profile/4503309999",
+    },
+    {
+      app: "Royal Road",
+      img: "/icons/royalroad.webp",
+      url: "https://www.royalroad.com/fiction/123560/the-frost-and-the-flame-bl",
+    },
+    {
+      app: "ko-fi",
+      img: "/icons/ko-fi.webp",
+      url: "https://ko-fi.com/yongk_author/10",
+    },
+  ];
+
+  return (
+    <section id="links" className="w-screen p-8 bg-black">
+      <div className="max-w-[1080px] mx-auto w-full">
+        <div className="flex flex-wrap justify-between">
+          {links.map((app) => {
+            const sizes =
+              app.app === "ko-fi" ? "h-[50px]" : "h-[50px] w-[50px]";
+
+            return (
+              <Link key={app.url} href={app.url} className="icon-animation">
+                <img className={sizes} src={app.img} alt={app.app} />
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
