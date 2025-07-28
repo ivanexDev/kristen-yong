@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 export const Links = () => {
   const links = [
@@ -25,22 +26,30 @@ export const Links = () => {
     },
     {
       app: "ko-fi",
-      img: "/icons/ko-fi.webp",
+      img: "/icons/ko-fi.png",
       url: "https://ko-fi.com/yongk_author/10",
     },
   ];
 
   return (
-    <section id="links" className="w-screen p-8 bg-black">
+    <section id="links" className="w-full p-8 bg-black">
       <div className="max-w-[1080px] mx-auto w-full">
         <div className="flex flex-wrap justify-between">
           {links.map((app) => {
-            const sizes =
-              app.app === "ko-fi" ? "h-[50px]" : "h-[50px] w-[50px]";
-
             return (
-              <Link key={app.url} href={app.url} className="icon-animation">
-                <img className={sizes} src={app.img} alt={app.app} />
+              <Link
+                href={app.url}
+                key={app.url}
+                className="h-[50px] w-[50px] flex relative icon-animation"
+              >
+                <Image
+                  className="object-contain"
+                  src={app.img}
+                  alt={app.app}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 433px"
+                  priority
+                />
               </Link>
             );
           })}

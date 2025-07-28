@@ -18,10 +18,10 @@ const Page = async ({ params }: PageProps) => {
     <>
       <section
         id="characters"
-        className="w-screen p-8 bg-black text-[#D2C69Cff] character-description-section"
+        className="w-full p-8 bg-black text-[#D2C69Cff] h-full"
       >
-        <div className="max-w-[1440px] mx-auto w-full flex flex-row justify-center items-center flex-wrap">
-          <div className="text-2xl flex flex-col w-[500px]">
+        <div className="text-black max-w-[1440px] mx-auto w-full flex flex-row justify-center items-center flex-wrap">
+          <div className="text-2xl flex flex-col w-[500px] text-white-glow">
             <h1>Name: {characterData?.name}</h1>
             <span>Title: {characterData?.title}</span>
             <span>Aliases: {characterData?.aliases}</span>
@@ -35,7 +35,7 @@ const Page = async ({ params }: PageProps) => {
           <div className="flex relative w-[433px] h-[650px]">
             <Image
               className="object-contain"
-              src={characterData?.img || "/placeholder.jpg"}
+              src={characterData!.img}
               alt={characterData?.name || "character image"}
               fill
               sizes="(max-width: 768px) 100vw, 433px"

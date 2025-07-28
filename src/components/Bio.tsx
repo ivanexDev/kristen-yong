@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export const Bio = () => {
   return (
-    <section id="bio" className="w-screen p-8 bg-[#0C2C3Dff]">
-      <div className="max-w-[1440px] mx-auto w-full flex items-center justify-center flex-wrap">
+    <section id="bio" className="w-full bg-[#0C2C3Dff]">
+      <div className="max-w-[1440px] mx-auto w-full flex items-center justify-center flex-wrap p-8">
         <div className="text-[#D2C69Cff]">
           <h2 className="text-6xl mb-6 border-b font-asiatiyca">Bio</h2>
           <p className="max-w-[500px] text-xl mb-3.5">

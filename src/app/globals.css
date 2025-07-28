@@ -18,12 +18,13 @@
   --font-asiatiyca: "asiatiyca"
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+.text-white-glow {
+  text-shadow:
+    0 0 1px white,
+    0 0 2px white,
+    0 0 2px white,
+    0 0 4px white;
+}
 
 body {
   background: var(--background);
