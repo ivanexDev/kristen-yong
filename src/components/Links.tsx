@@ -6,27 +6,27 @@ export const Links = () => {
   const links = [
     {
       app: "Instagram",
-      img: "/icons/instagram.png",
+      img: "/instagram.png",
       url: "https://www.instagram.com/yongkristen.author/",
     },
     {
       app: "TikTok",
-      img: "/icons/tiktok.webp",
+      img: "/tiktok.webp",
       url: "https://www.tiktok.com/@danmei.kristenyong",
     },
     {
       app: "Web Novels",
-      img: "/icons/webnovel.webp",
+      img: "/webnovel.webp",
       url: "https://www.webnovel.com/profile/4503309999",
     },
     {
       app: "Royal Road",
-      img: "/icons/royalroad.webp",
+      img: "/royalroad.webp",
       url: "https://www.royalroad.com/fiction/123560/the-frost-and-the-flame-bl",
     },
     {
       app: "ko-fi",
-      img: "/icons/ko-fi.png",
+      img: "/ko-fi.png",
       url: "https://ko-fi.com/yongk_author/10",
     },
   ];
