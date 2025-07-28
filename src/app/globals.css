@@ -101,14 +101,14 @@ body {
 
   .book-section{
     /* font-family: "Asiatiyca", sans-serif; */
-    background-image: url('/bg1.png');
+    background-image: url('/bg1.webp');
     background-position: center 80%;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .character-description-section{
-    background-image: url('/bg2.png');
+    background-image: url('/bg2.webp');
     background-position: center 80%;
     background-size: cover;
     background-repeat: no-repeat;
