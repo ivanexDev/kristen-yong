@@ -1,0 +1,60 @@
+/* [project]/src/app/animations.css [app-client] (css) */
+.slide-left {
+  -webkit-animation: 2s cubic-bezier(.25, .46, .45, .94) both slide-left;
+  animation: 2s cubic-bezier(.25, .46, .45, .94) both slide-left;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  -webkit-animation: 2s cubic-bezier(.25, .46, .45, .94) both slide-right;
+  animation: 2s cubic-bezier(.25, .46, .45, .94) both slide-right;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=src_app_animations_css_f9ee138c._.single.css.map*/

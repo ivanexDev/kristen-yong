@@ -1,0 +1,11 @@
+import React from 'react'
+
+export const Video = () => {
+  return (
+<section className="w-screen p-8 bg-[#0C2C3Dff]">
+  <div className="max-w-[1440px] mx-auto w-full flex items-center justify-center flex-wrap">
+    <iframe width="840" height="473" src="https://www.youtube.com/embed/-d92fYysZ7o?si=3VKMN1gwr-7XyIOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+  )
+}
