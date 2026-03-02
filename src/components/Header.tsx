@@ -22,7 +22,7 @@ export const Header = () => {
         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
       </div>
       
-      <ul className="flex justify-center gap-12 w-full max-w-4xl text-sm tracking-[0.2em] uppercase transition-all">
+      <ul className="flex justify-center gap-12 w-full max-w-4xl text-sm tracking-[0.2em] uppercase transition-all font-serif font-medium">
         {items.map((item) => (
           <li key={item.route} className="group relative">
             <Link 
