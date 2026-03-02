@@ -3,43 +3,38 @@ import React from "react";
 
 export const Header = () => {
   const items = [
-    {
-      title: "Home",
-      route: "/",
-    },
-    {
-      title: "Bio",
-      route: "#bio",
-    },
-    {
-      title: "Links",
-      route: "#links",
-    },
-    {
-      title: "System Cultivation",
-      route: "/system",
-    },
-    {
-      title: "Contact",
-      route: "mailto:kristencarcamo@gmail.com",
-    },
+    { title: "Home", route: "/" },
+    { title: "Bio", route: "#bio" },
+    { title: "Links", route: "#links" },
+    { title: "System Cultivation", route: "/system" },
+    { title: "Contact", route: "mailto:kristencarcamo@gmail.com" },
   ];
 
   return (
-    <nav className="bg-[#0C2C3Dff] text-[#D2C69Cff] flex flex-col p-8 items-center border-b border-b-white gap-7 font-asiatiyca">
-      <div>
+    <nav className="bg-ink text-gold border-b border-gold/20 flex flex-col items-center py-10 px-8 gap-8 font-asiatiyca sticky top-0 z-50 backdrop-blur-sm bg-ink/90">
+      <div className="relative">
         <Link href="/">
-          <h1 className="text-7xl">Kristen Yong</h1>
+          <h1 className="text-6xl tracking-widest hover:text-hanji transition-colors duration-500">
+            Kristen Yong
+          </h1>
         </Link>
+        {/* Signature element: Underline that looks like a brush stroke (simplified with CSS) */}
+        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
       </div>
-      <ul className="flex justify-between w-full max-w-[1088px] font-semibold">
-        {items.map((item) => {
-          return (
-            <li key={item.route}>
-              <a href={item.route}>{item.title}</a>
-            </li>
-          );
-        })}
+      
+      <ul className="flex justify-center gap-12 w-full max-w-4xl text-sm tracking-[0.2em] uppercase transition-all">
+        {items.map((item) => (
+          <li key={item.route} className="group relative">
+            <a 
+              href={item.route} 
+              className="hover:text-hanji transition-colors duration-300 block py-1"
+            >
+              {item.title}
+            </a>
+            {/* Subtle indicator for active/hover */}
+            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-cinnabar transition-all duration-300 group-hover:w-full" />
+          </li>
+        ))}
       </ul>
     </nav>
   );
