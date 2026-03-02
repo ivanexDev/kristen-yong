@@ -2,9 +2,31 @@ import { CHARACTERS } from "@/data/characters.data";
 import { normalizeName } from "@/utils/normalizeName";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface PageProps {
   params: Promise<{ name: string }>;
+}
+
+export function generateStaticParams() {
+  return CHARACTERS.map((char) => ({
+    name: normalizeName(char.name),
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { name } = await params;
+  
+  const characterData = CHARACTERS.find((char) => {
+    return normalizeName(char.name) === name;
+  });
+
+  if (!characterData) return {};
+
+  return {
+    title: `${characterData.name} | Kristen Yong`,
+    description: characterData.profile.slice(0, 160) + '...',
+  };
 }
 
 const Page = async ({ params }: PageProps) => {
@@ -35,10 +57,13 @@ const Page = async ({ params }: PageProps) => {
             <div className="relative group">
               <div className="absolute -inset-4 border border-gold/10 translate-x-4 translate-y-4" />
               <div className="relative border-traditional overflow-hidden bg-black shadow-2xl aspect-[3/4]">
-                <img 
-                  className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000" 
+                <Image 
+                  className="object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000" 
                   src={characterData.img} 
                   alt={characterData.name} 
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
               </div>
             </div>

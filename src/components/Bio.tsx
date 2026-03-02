@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export const Bio = () => {
   return (
@@ -34,10 +35,12 @@ export const Bio = () => {
           <div className="relative group">
             <div className="absolute inset-0 border border-gold/20 translate-x-4 -translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500" />
             <div className="relative border-traditional overflow-hidden shadow-2xl p-4 hanji-surface">
-              <img 
+              <Image 
                 className="max-h-[500px] w-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
                 src="/author.JPG" 
-                alt="Kristen Yong" 
+                alt="Kristen Yong"
+                width={350}
+                height={500}
               />
             </div>
           </div>

@@ -6,11 +6,11 @@ import { Video } from "@/components/Video";
 
 export default function Home() {
   return (
-<>
+<main>
 	<Book/>
 	<Video/>
 	<Bio/>
 	<Characters/>
-</>
+</main>
   );
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 export const Footer = () => {
@@ -37,11 +38,13 @@ export const Footer = () => {
             <h3 className="text-cinnabar text-xs font-bold uppercase tracking-[0.3em]">Conexiones</h3>
             <div className="flex flex-wrap gap-6">
               {links.map((link) => (
-                <Link key={link.url} href={link.url} className="group" title={link.app}>
-                  <img 
+                <Link key={link.url} href={link.url} className="group relative w-6 h-6" title={link.app}>
+                  <Image 
                     src={link.img} 
                     alt={link.app} 
-                    className="h-6 w-auto grayscale brightness-125 opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
+                    fill
+                    className="object-contain grayscale brightness-125 opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
+                    sizes="24px"
                   />
                 </Link>
               ))}

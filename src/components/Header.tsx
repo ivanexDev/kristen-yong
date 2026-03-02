@@ -25,12 +25,12 @@ export const Header = () => {
       <ul className="flex justify-center gap-12 w-full max-w-4xl text-sm tracking-[0.2em] uppercase transition-all">
         {items.map((item) => (
           <li key={item.route} className="group relative">
-            <a 
+            <Link 
               href={item.route} 
               className="hover:text-hanji transition-colors duration-300 block py-1"
             >
               {item.title}
-            </a>
+            </Link>
             {/* Subtle indicator for active/hover */}
             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-cinnabar transition-all duration-300 group-hover:w-full" />
           </li>

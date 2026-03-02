@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export const Book = () => {
   return (
@@ -6,7 +7,7 @@ export const Book = () => {
       {/* Decorative background element: Subtle texture or gradient */}
       <div className="absolute inset-0 opacity-40 pointer-events-none bg-[url('/bg1.png')] bg-cover bg-center mix-blend-overlay" />
       
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+      <div className="max-w-[1400px] w-full mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
         <div className="flex-1 space-y-8 max-w-3xl">
           <div className="inline-block border-l-4 border-cinnabar pl-6">
             <p className="text-3xl md:text-4xl lg:text-5xl text-hanji font-asiatiyca leading-tight tracking-wide">
@@ -28,10 +29,13 @@ export const Book = () => {
             {/* Ambient Glow: Suaviza los bordes de la imagen con el fondo */}
             <div className="absolute w-[120%] h-[120%] bg-gold/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000 group-hover:opacity-20" />
             
-            <img 
-              className="max-h-[700px] w-auto grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]" 
+            <Image 
+              className="max-h-[850px] w-auto grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]" 
               src="/book.webp" 
-              alt="Book Cover" 
+              alt="Book Cover"
+              width={650}
+              height={850}
+              priority
             />
           </div>
         </div>
