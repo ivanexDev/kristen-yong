@@ -4,8 +4,8 @@ import React from "react";
 export const Header = () => {
   const items = [
     { title: "Home", route: "/" },
-    { title: "Bio", route: "#bio" },
-    { title: "Links", route: "#links" },
+    { title: "Bio", route: "/#bio" },
+    { title: "Chronicles", route: "/chronicles" },
     { title: "System Cultivation", route: "/system" },
     { title: "Contact", route: "mailto:kristencarcamo@gmail.com" },
   ];

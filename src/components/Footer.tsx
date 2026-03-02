@@ -27,9 +27,10 @@ export const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-cinnabar text-xs font-bold uppercase tracking-[0.3em]">Navegación</h3>
             <ul className="space-y-4 text-sm font-serif">
-              <li><a href="#bio" className="hover:text-gold transition-colors">Biografía</a></li>
-              <li><a href="#characters" className="hover:text-gold transition-colors">Personajes</a></li>
-              <li><a href="/system" className="hover:text-gold transition-colors">System Cultivation</a></li>
+              <li><Link href="/#bio" className="hover:text-gold transition-colors">Biografía</Link></li>
+              <li><Link href="/#characters" className="hover:text-gold transition-colors">Personajes</Link></li>
+              <li><Link href="/chronicles" className="hover:text-gold transition-colors">Chronicles</Link></li>
+              <li><Link href="/system" className="hover:text-gold transition-colors">System Cultivation</Link></li>
             </ul>
           </div>
 
